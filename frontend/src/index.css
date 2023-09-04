@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Baloo+Bhai+2:wght@700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Baloo 2';
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: block;
+  height: 3vh;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #1f63d8;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #16479d;
+  margin-bottom: 1em;
+  font-size: 2.2em;
+}
+
+.bold {
+  font-weight: bold;
+  color: #16479d;
+}

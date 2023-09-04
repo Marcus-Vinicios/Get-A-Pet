@@ -1,0 +1,10 @@
+.profile_header {
+    margin: 0 auto;
+    max-width: 300px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.profile_header h1 {
+    margin-right: 100%;
+}

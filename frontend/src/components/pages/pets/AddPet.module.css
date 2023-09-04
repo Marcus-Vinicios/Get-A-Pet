@@ -1,0 +1,11 @@
+.addpet_header {
+    max-width: 300px;
+    background-color: #FFF;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 0.5em;
+}
+
+.addpet_header h1 {
+    margin: 0;
+}
