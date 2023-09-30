@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom' -> AddPet, UserAuth,
 
 //Components
 import Container from './components/layout/Container';

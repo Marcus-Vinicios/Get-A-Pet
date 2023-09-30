@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import useFlashMessage from '../../../hooks/useFlashMessage'
 import api from '../../../utils/api'
 import RoundedImage from '../../layout/RoundedImage'
 import styles from './Dashboard.module.css'
 
 export default function MyPets() {
-    const [pets, setPets] = useState([])
-    const [token] = useState(localStorage.getItem('token' || ''))
-    const { setFlashMessage } = useFlashMessage()
-    const navigate = useNavigate()
+    const [pets, setPets] = useState([]);
+    const [token] = useState(localStorage.getItem('token' || ''));
+    const { setFlashMessage } = useFlashMessage();
 
     useEffect(() => {
         api.get('/pets/mypets', {
@@ -20,10 +19,10 @@ export default function MyPets() {
             setPets(response.data.pets)
         })
 
-    }, [token])
+    }, [token]);
 
     const removePet = async (id) => {
-        let msgType = 'success'
+        let msgType = 'success';
 
         const data = await api.delete(`/pets/${id}`, {
             headers: {
@@ -38,12 +37,12 @@ export default function MyPets() {
             .catch((err) => {
                 msgType = 'error'
                 return err.response.data
-            })
-        setFlashMessage(data.message, msgType)
-    }
+            });
+        setFlashMessage(data.message, msgType);
+    };
 
     const concludeAdoption = async (id) => {
-        let msgType = 'success'
+        let msgType = 'success';
 
         const data = await api.patch(`/pets/conclude/${id}`, {
             headers: {
@@ -54,9 +53,9 @@ export default function MyPets() {
         }).catch((err) => {
             msgType = 'error'
             return err.response.data
-        })
+        });
 
-        setFlashMessage(data.message, msgType)
+        setFlashMessage(data.message, msgType);
     }
 
     return (
